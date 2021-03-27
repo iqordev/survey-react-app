@@ -26,7 +26,7 @@
     -->
     <title>React App</title>
   </head>
-  <body>
+  <body onload="myFunction()">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
@@ -40,4 +40,11 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script>
+    function myFunction() {
+      window.postMessage(
+        '{"title":"Work At Home Survey","description":"Survey to check if employees are willing and able to work from home.","completedHtml":"[lt]H2[gt] Thank you for taking the survey [lt]/H2[gt]","pages":[{"name":"page1","elements":[{"type":"html","name":"question1","html":"[lt]center[gt][lt]img src=[dquote]http://clk3wpsistg02/FLEXFORM.STG/Data/Images/HomeworqsSurvey.png[dquote] width=[dquote]500[dquote] height=[dquote]200[dquote][gt][lt]/center[gt][lt]/br[gt][lt]/br[gt]"},{"type":"text","name":"employeeid","title":"Employee Id","readOnly":true},{"type":"text","name":"username","startWithNewLine":false,"title":"iQor Username","readOnly":true},{"type":"text","name":"emailid","startWithNewLine":false,"title":"Email ID","validators":[{"type":"email"}]},{"type":"text","name":"work_location","title":"Work Location"},{"type":"text","name":"cell_phone","startWithNewLine":false,"title":"Personal Cell Phone","isRequired":true,"inputMask":"phone"},{"type":"text","name":"home_addr","title":"Home Address"},{"type":"html","name":"question5","html":"[lt]h4[gt]• [lt]b[gt]Summary:[lt]/b[gt] Survey to identify employees who can potentially work from home.[lt]br[gt][lt]br[gt][lt]h4[gt]"}]},{"name":"page2","elements":[{"type":"radiogroup","name":"hasinternetconnection","title":"Do you have wired, high speed internet at home (home Wi-Fi)?  ","isRequired":true,"choices":[{"value":"Yes","text":"Yes"},{"value":"No","text":"No"}]},{"type":"radiogroup","name":"avgspeed","title":"Do you know what is the average speed of your internet?","isRequired":true,"choices":[{"value":"lessthan5mbps","text":"I don’t know, less than 5mbps"},{"value":"morethan5mbps","text":"More than 5 but less than 10mbps "},{"value":"morethan10mbps","text":"More than 10mbps"}]},{"type":"radiogroup","name":"workspace","title":"Do you have a quiet space in your home that is free of distractions where you can work and connect a computer or thin client to the network?","isRequired":true,"choices":[{"value":"Yes","text":"Yes"},{"value":"No","text":"No"}]}]}],"showTitle":false,"showQuestionNumbers":"off","showProgressBar":"top","pageNextText":"Start","isPublic":true,"javascriptURL":"nxgen_homeWorQs.js"}'
+      );
+    }
+  </script>
 </html>
